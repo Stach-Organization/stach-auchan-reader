@@ -1,0 +1,48 @@
+<html>
+    <body>
+        <div id='output'>
+
+        </div>
+    </body>
+    <script>
+        function json2Table(json) {
+            let cols = Object.keys(json[0]);
+          
+          
+            //Map over columns, make headers,join into string
+            let headerRow = cols
+              .map(col => `<th>${col}</th>`)
+              .join("");
+          
+            //map over array of json objs, for each row(obj) map over column values,
+            //and return a td with the value of that object for its column
+            //take that array of tds and join them
+            //then return a row of the tds
+            //finally join all the rows together
+            let rows = json
+              .map(row => {
+                let tds = cols.map(col => `<td>${row[col]}</td>`).join("");
+                return `<tr>${tds}</tr>`;
+              })
+              .join("");
+          
+            //build the table
+            const table = `
+              <table>
+                  <thead>
+                      <tr>${headerRow}</tr>
+                  <thead>
+                  <tbody>
+                      ${rows}
+                  <tbody>
+              <table>`;
+          
+            return table;
+          }
+          
+          data =[{"name":"Doritos Tortillas chips goût barbecue style 170g", "prix":"3.58"},{"name":"Auchan bio Kiwis 6 pièces", "prix":"3.49"},{"name":"AUCHAN Lait demi-écrémé Hauts-De-France 6x1L", "prix":"9.60"},{"name":"Uncle Ben's Riz long grain prêt en 10 min 1kg", "prix":"2.21"},{"name":"Actuel Balayette x1", "prix":"3.52"},{"name":"Carottes", "prix":"1.69"},{"name":"Taureau Ailé Riz pour risotto prêt en 15-18 min 500g", "prix":"1.99"},{"name":"Auchan Papier toilette blanc ultra doux & moelleux 3 épaisseurs x12", "prix":"7.90"},{"name":"Amora Mayonnaise de Dijon goût authentique sans conservateur en bocal 470g", "prix":"1.77"},{"name":"Tipiak Graines de couscous parfumé aux épices du monde en sachets 2x255g", "prix":"2.61"},{"name":"Auchan Riz basmati prêt en 11 min 500g", "prix":"2.20"},{"name":"Barilla Spaghetti n°5 500g", "prix":"1.50"},{"name":"Thon albacore au naturel", "prix":"6.76"},{"name":"Quaker Cruesli céréales au chocolat au lait 900g", "prix":"4.91"},{"name":"Patates douces", "prix":"3.49"},{"name":"Auchan maïs sans résidus de pesticide 285g", "prix":"1.59"},{"name":"Auchan Serpillières gaufrées 50x50cm", "prix":"5.92"},{"name":"L'Atelier Blini Tarama extra œufs de cabillaud fumés 180g", "prix":"2.89"},{"name":"Kiwis filière responsable 5 pièces", "prix":"2.49"},{"name":"MAMIE NOVA Yaourt brassé à l'ananas et passion 2x150g", "prix":"1.22"},{"name":"Champignons blancs pieds entiers", "prix":"0.99"},{"name":"Lesieur Isio 4 huile de 4 graines origine France 1l", "prix":"5.34"},{"name":"AUCHAN Emmental râpé français 500g", "prix":"6.82"},{"name":"Doritos Tortillas chips saveur sweet chilli pepper 170g", "prix":"1.79"},{"name":"MAMIE NOVA Yaourt brassé à la pêche 2x150g", "prix":"1.22"},{"name":"Pringles Tuiles salées saveur crème et oignon 195g", "prix":"3.30"},{"name":"Maggi Bouillon de volaille fabriqué en France 180g", "prix":"1.52"},{"name":"Danette Crème dessert chocolat 4x125g", "prix":"1.29"},{"name":"Pringles Original Tuiles salées 195g", "prix":"2.20"},{"name":"Essuie-tout déco blanc", "prix":"11.98"},{"name":"Auchan Steaks hachés 100% pur boeuf 15% M.G 1kg", "prix":"6.96"},{"name":"Avocat bio", "prix":"2.98"},{"name":"Bonduelle Macédoine de légumes de France, sans conservateur 530g", "prix":"2.44"},{"name":"Poivrons panachés 500g", "prix":"1.69"},{"name":"Barilla Sauce tomate au basilic, en bocal 400g", "prix":"2.66"},{"name":"MAMIE NOVA Yaourt brassé à la framboise 2x150g", "prix":"1.22"},{"name":"Auchan Allumettes fumées 2x100g", "prix":"2.50"},{"name":"Special K Original céréales nature 440g", "prix":"4.82"},{"name":"Trésor Céréales fourrées chocolat noisettes 1kg", "prix":"10.46"},{"name":"Saint-Malo bâtonnets de surimi x30 - 500g", "prix":"2.90"},{"name":"Poireaux botte 1kg", "prix":"1.79"},{"name":"Kiwi pièce", "prix":"2.50"},{"name":"Auchan Brocolis en fleurettes 1kg", "prix":"3.50"},{"name":"Pringles Tuiles goût paprika 195g", "prix":"3.30"},{"name":"Coca cola Boisson gazeuse aux extraits végétaux zéro boîtes 15x33cl", "prix":"13.08"},{"name":"Panzani Ravioli pur bœuf 800g", "prix":"3.46"},{"name":"Special K Barres de céréales au chocolat au lait belge 6 barres 120g", "prix":"2.00"},{"name":"Auchan Petits pois extra fins à l'étuvée origine France 280g", "prix":"0.74"},{"name":"Kühne Oignons frits 100g", "prix":"0.99"},{"name":"Pierre Chanau Côtes de Bergerac blanc moelleux 75cl", "prix":"11.96"}]
+          
+          output = document.getElementById('output')
+          output.innerHTML = json2Table(data)
+          </script>
+</html>
