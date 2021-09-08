@@ -3,7 +3,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import CheckBox from './CheckBox';
 import Card from './components/Card';
 
-const users = ['Lucas', 'Quentin', 'Geoffrey'];
+const users = ['Vincent', 'Quentin', 'Geoffrey'];
 
 const initTotalUsers = () => users.map((user) => ({
   name: user,
@@ -103,17 +103,17 @@ const Table = ({ data }) => {
             <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
               <table className="min-w-full divide-y divide-gray-200 table-auto">
                 <thead className="bg-gray-50">
-                  <tr>
-                    <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  <tr className="bg-gray-50">
+                    <th scope="col" className="bg-gray-50 sticky top-0 z-10 px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Nom de l'article
                     </th>
-                    <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th scope="col" className="bg-gray-50 sticky top-0 z-10 px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Prix
                     </th>
                     {users.map((el) => (
-                      <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">{el}</th>
+                      <th scope="col" className="bg-gray-50 sticky top-0 z-10 px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">{el}</th>
                     ))}
-                    <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    <th scope="col" className="bg-gray-50 sticky top-0 z-10 px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Tous
                     </th>
                   </tr>

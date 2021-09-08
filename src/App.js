@@ -44,3 +44,10 @@ function App() {
 }
 
 export default App;
+
+/* {"data": [
+{
+"name":"test",
+"prix": 10
+}
+]} */
