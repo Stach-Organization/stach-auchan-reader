@@ -14,6 +14,7 @@ document.querySelectorAll('.table.extracted-data').forEach((e) => {
 })
 string = string.slice(0, -1);
 string += "]}";
+JSON.parse(string);
 
 ```
 
