@@ -18,7 +18,7 @@ const Table = ({ data }) => {
   useEffect(() => {
     let totalCalculated = 0.0;
     data.data.map(({ prix }, index) => {
-      totalCalculated += parseFloat(prix);
+      totalCalculated += parseFloat(prix.replace(',', '.'));
     });
     setTotal(Number((totalCalculated).toFixed(2)));
   }, []);
@@ -67,7 +67,8 @@ const Table = ({ data }) => {
   };
 
   const getPricePerProduct = (map, productIndex) => {
-    const productPrice = parseFloat(data.data[productIndex].prix);
+    console.log(data.data[productIndex].prix.replace(',', '.'));
+    const productPrice = parseFloat(data.data[productIndex].prix.replace(',', '.'));
     const numberOfChecks = getSumCheckedByProduct(map, productIndex);
 
     return numberOfChecks === 0 ? 0 : productPrice / numberOfChecks;
