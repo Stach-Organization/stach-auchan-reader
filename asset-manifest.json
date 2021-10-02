@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/stach-auchan-reader/static/css/main.7ba9e00f.chunk.css",
-    "main.js": "/stach-auchan-reader/static/js/main.c098d5d8.chunk.js",
-    "main.js.map": "/stach-auchan-reader/static/js/main.c098d5d8.chunk.js.map",
+    "main.js": "/stach-auchan-reader/static/js/main.03320b20.chunk.js",
+    "main.js.map": "/stach-auchan-reader/static/js/main.03320b20.chunk.js.map",
     "runtime-main.js": "/stach-auchan-reader/static/js/runtime-main.4f89c090.js",
     "runtime-main.js.map": "/stach-auchan-reader/static/js/runtime-main.4f89c090.js.map",
     "static/js/2.57d7aba3.chunk.js": "/stach-auchan-reader/static/js/2.57d7aba3.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4f89c090.js",
     "static/js/2.57d7aba3.chunk.js",
     "static/css/main.7ba9e00f.chunk.css",
-    "static/js/main.c098d5d8.chunk.js"
+    "static/js/main.03320b20.chunk.js"
   ]
 }
